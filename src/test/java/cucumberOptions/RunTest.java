@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
         glue = "stepdifinition",
         plugin = {"pretty"},
         features = "src/test/resources/features",
-        tags = "@tc1"
+        tags = "@tc1 or @tc2"
 )
 public class RunTest {
     private TestNGCucumberRunner testNGCucumberRunner;
