@@ -1,4 +1,4 @@
-Feature: Login
+Feature: login
 
   Background: navigate to the php travels
     Given navigate to the php travels home page
