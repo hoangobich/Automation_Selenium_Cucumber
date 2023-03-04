@@ -10,8 +10,8 @@ public class exam1 {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
         Date startDate = simpleDateFormat.parse(start);
         Date endDate = simpleDateFormat.parse(end);
-        long result = Math.abs(startDate.getTime()-endDate.getTime())/(24*60*60*1000);
-        System.out.println("total number of days from the start date to the end date :"+result);
+        long sumDate = Math.abs(startDate.getTime()-endDate.getTime())/(24*60*60*1000);
+        System.out.println("total number of days from the start date to the end date :"+sumDate);
     }
     public static void countMonth() throws ParseException {
         String start ="20180220";
