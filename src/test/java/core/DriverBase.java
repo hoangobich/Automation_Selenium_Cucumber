@@ -16,12 +16,10 @@ public class DriverBase {
         }
         switch (browser) {
             case "chrome":
-                WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 driver.manage().window().maximize();
                 break;
             case "firefox":
-                WebDriverManager.chromedriver().setup();
                 driver = new FirefoxDriver();
                 driver.manage().window().maximize();
                 break;

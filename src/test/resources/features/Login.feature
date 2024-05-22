@@ -12,8 +12,16 @@ Feature: login
       | admin@phptravels.com | demoadmin |
 
   @tc2
-  Scenario: check information placeholder email and password and is selected remember me
+  Scenario Outline: check information placeholder email and password and is selected remember me
     When click button remember me
     Then verify button remember me selected success
     Then verify information placeholder email and password is correct
+    Examples:
+
+  @tc3
+  Scenario Outline: Navidate to facebook
+    Given navigate to "<url>"
+    Examples:
+      | url                                        |
+      | https://m.facebook.com/login/?locale=vi_VN |
 

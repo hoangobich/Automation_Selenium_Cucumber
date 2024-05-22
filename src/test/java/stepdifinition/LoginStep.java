@@ -40,4 +40,9 @@ public class LoginStep extends DriverBase {
     public void verifyButtonRememberMeSelectedSuccess() {
         loginPage.verifyRememberMeIsSelected();
     }
+
+    @Given("navigate to {string}")
+    public void navigateTo(String url) {
+        loginPage.navigateToPage(url);
+    }
 }
