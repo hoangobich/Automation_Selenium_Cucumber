@@ -1,6 +1,6 @@
 package pages.login;
 
-import core.BasePage;
+import common.BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,13 +10,13 @@ public class LoginPage extends BasePage {
     public LoginPage(WebDriver driver){
         super(driver);
     }
-    @FindBy(xpath = "//form[contains(@class,'form-signin')]//input[@name='email']")
+    @FindBy(xpath = "//input[@name='email']")
     private WebElement input_email;
     @FindBy(xpath = "//input[@name='password']")
     private WebElement input_password;
-    @FindBy(xpath = "//span[text()='Login']//parent::button")
+    @FindBy(xpath = "//button[text()='Login']")
     private WebElement btn_login;
-    @FindBy(xpath = "//h1[text()='Dashboard']")
+    @FindBy(xpath = "//span[text()='Dashboard']")
     private WebElement dashboard_screen;
     @FindBy(xpath = "//input[@name='remember']//parent::div")
     private WebElement check_box_remember_me;
@@ -24,10 +24,10 @@ public class LoginPage extends BasePage {
         navigateToPage("https://phptravels.net/admin");
     }
     public void inputEmail(String email){
-        senkeysToElement(input_email,email);
+        sendKeysToElement(input_email,email);
     }
     public void inputPass(String password){
-        senkeysToElement(input_password,password);
+        sendKeysToElement(input_password,password);
     }
     public void clickBtnLogin(){
         clickToElement(btn_login);
